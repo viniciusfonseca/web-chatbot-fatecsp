@@ -1,10 +1,10 @@
 .App {
   height: 100%;
   min-height: 400px;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
+  background-color: #6ac8cf;
 }
 
 .App-flex {
@@ -45,4 +45,88 @@
   color: #00d8ff;
   padding: .2em .3em;
   border-radius: .2em;
+}
+
+@keyframes fadein {
+  from {
+    position: relative;
+    top: 40px;
+    opacity: 0;
+  }
+  to {
+    position: relative;
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.logo {
+  width: 190px;
+  height: 90px;
+  margin-bottom: 10px;
+}
+
+.app-messages {
+  height: 600px;
+  width: 800px;
+  background-color: #fbcf54;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2);
+  animation-name: fadein;
+  animation-duration: 200ms;
+  animation-iteration-count: 1;
+}
+
+.app-messages .title {
+  text-align: center;
+  margin: 6px;    
+}
+
+.app-messages .inner {
+  background-color: #FFF;
+  padding: 10px;
+  border-radius: 8px;
+  align-items: flex-start;
+  overflow: auto;
+}
+
+.app-messages form {
+  margin-top: 10px;
+}
+
+.app-messages form input {
+  margin-right: 10px; 
+}
+
+.message {
+  border-radius: 6px;
+  margin: 4px 0;
+  padding: 10px;
+  color: #000;
+  background: #90CAF9;
+  max-width: 45%;
+  animation-name: fadein;
+  animation-duration: 200ms;
+  animation-iteration-count: 1;
+}
+
+.message.user {
+  color: #FFF;
+  background: #1E88E5;
+  align-self: flex-end;
+}
+
+.message em {
+  font-size: 12px;
+}
+
+.message .datetime {
+  margin-top: 4px;
+  text-align: right;
+  font-size: 12px;
+}
+
+.message.user .datetime {
+  text-align: left;
 }
